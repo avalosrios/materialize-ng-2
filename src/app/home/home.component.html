@@ -1,0 +1,32 @@
+<md-card>
+  <div>
+    {{title}}
+  </div>
+  <div class="">
+    <form (ngSubmit)="onSubmit()" #quizzForm="ngForm">
+      <div>
+        <md-input required [(ngModel)]="quizz.answer1" name="answer1" placeholder="{{question_1}}"></md-input>
+      </div>
+
+      <div>
+        <md-input required [(ngModel)]="quizz.answer2" name="answer2" placeholder="{{question_2}}"></md-input>
+      </div>
+
+      <div>
+        <md-input required [(ngModel)]="quizz.answer3" name="answer3" placeholder="{{question_3}}"></md-input>
+      </div>
+    <!-- (click)="onClickSubmit()" -->
+      <div>
+        <button type="submit" [disabled]="!quizzForm.form.valid" md-raised-button color="primary">{{button_label}}</button>
+      </div>
+    </form>
+  </div>
+</md-card>
+
+<div [hidden]="!approved">
+  <!-- Hidden untill submitted and validated -->
+  <md-card >
+    <app-decipher></app-decipher>
+  </md-card>
+</div>
+

@@ -1,0 +1,17 @@
+<div>
+  <h3>{{instruction}}</h3>
+  <form (ngSubmit)="onSubmit()" #decipher="ngForm" >
+    <div>
+      <textarea required name="encoded-text" cols="40" rows="5" [(ngModel)]="ciphered_text"></textarea>
+    </div>
+    <div>
+      <button type="submit" [disabled]="!decipher.form.valid" md-raised-button color="primary">{{button_label}}</button>
+      <button md-raised-button (click)="reset()">{{reset_label}}</button>
+    </div>
+  </form>
+<div>
+
+<div [hidden]="!submitted">
+  <!-- TODO add here the result for deciphering a text -->
+  <p>{{desciphered_text}}</p>
+</div>
