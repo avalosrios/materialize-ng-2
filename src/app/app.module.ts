@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MaterializeNg2RoutingModule } from './app-routing.module';
 import { DecipherComponent } from './decipher/decipher.component';
+import { QuizzComponent } from './quizz/quizz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DecipherComponent
+    DecipherComponent,
+    QuizzComponent
   ],
   imports: [
     BrowserModule,

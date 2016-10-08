@@ -2,4 +2,14 @@
 
 body {
   margin: 0;
+  background-image: url('/assets/viviyyo.jpg');
+}
+
+.padded {
+  padding: 10px;
+}
+
+.center {
+  width: 50%;
+  margin: 0 auto;
 }
